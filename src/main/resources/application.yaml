@@ -1,0 +1,46 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /api/
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    username: root
+    password: root
+    platform: h2
+    url: jdbc:h2:mem:jwt-demo
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+    show-sql: true
+  cache:
+    # After using Spring Cache, you can specify Spring.cache.Type to specify
+    #Although it will automatically adhere to the dependence of Cache, it will have an impact on the use of Redis.（JCache -> EhCache -> Redis -> Guava）
+    type: REDIS
+  redis:
+    host: 127.0.0.1
+    port: 6034
+    # password:  There is no password by default, the production environment must set a password
+    # Time out（ms）
+    timeout: 10000
+    # Redis has 16 shards by default, here configures the specific segmentation, the default is 0
+    database: 0
+    jedis:
+      pool:
+        # The maximum number of connecting pools (no limit is limited) by default 8
+        max-active: 10
+        # Connection pool maximum blocking waiting time (no limit is used) Default-1
+        max-wait: -1
+        # Connect to the maximum idle connection in the pool default 8
+        max-idle: 8
+        # Connect to the minimum idle connection default 0
+        min-idle: 0
