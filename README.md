@@ -6,7 +6,7 @@
 
 [Spring Security](https://spring.io/projects/spring-security) is a very powerful framework in the Spring family for authentication and permission control, and we can easily extend it to meet our current system security requirements.
 
-This Demo mainly USES **Spring Security** and **Spring Boot**, and all the dependencies adopt the latest stable version. Beyond the initial project, the JPA technology was also used. 
+This demo mainly uses **Spring Security** and **Spring Boot**, and all the dependencies adopt the latest stable version. Beyond the initial project, the JPA technology was also used.  
 
 
 
