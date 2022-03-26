@@ -6,7 +6,7 @@
 
 [Spring Security](https://spring.io/projects/spring-security) is a very powerful framework in the Spring family for authentication and permission control, and we can easily extend it to meet our current system security requirements.
 
-This Demo mainly USES **Spring Security** and **Spring Boot**, and all the dependencies adopt the latest stable version. Beyond the initial project, the JPA technology was also used. The code structure of the project is as follows (chrome plug-in: octree), which is relatively clear as a whole. 
+This Demo mainly USES **Spring Security** and **Spring Boot**, and all the dependencies adopt the latest stable version. Beyond the initial project, the JPA technology was also used. 
 
 
 
@@ -60,7 +60,7 @@ This Demo mainly USES **Spring Security** and **Spring Boot**, and all the depen
 
 ### 1.Sign in 
 
-**URL:** `POST http://localhost:9333/api/users/sign-up`
+**URL:** `POST http://localhost:8081/api/users/sign-up`
 
 **RequestBody:**
 
@@ -76,7 +76,7 @@ Newly registered users are bound by default to the following roles: USER and MAN
 
 ### 2.Log in 
 
-**URL:**`POST http://localhost:9333/api/auth/login`
+**URL:**`POST http://localhost:8081/api/auth/login`
 
 **RequestBody:**
 
@@ -116,7 +116,7 @@ We use GET requests to access `/api/users` but without a token or with an invali
 
 ### 5.With the correct Token but with access rights
 
-**URL:**`POST http://localhost:9333/api/users?username=jake`
+**URL:**`POST http://localhost:8081/api/users?username=jake`
 
 We use a DELETE request to access `/api/users?username=xxx`, carrying a valid token, but the token does not have enough access rights.
 
